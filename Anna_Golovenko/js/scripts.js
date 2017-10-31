@@ -41,7 +41,8 @@ function calculate(firstNumber, secondNumber, action) {
     case ('add'):
     case ('plus'):
       result = firstNumber + secondNumber;
-      break;
+      break;for (var i = 0; i < evaluator; i++) {
+      result *= multiplyNumber;
     case ('-'):
     case ('deduct'):
     case ('minus'):
@@ -57,12 +58,25 @@ function calculate(firstNumber, secondNumber, action) {
       break;
     case ('^'):
     case ('exponentiation'):
-      result = Math.pow(firstNumber, secondNumber);
+      result = /*Math.*/pow(firstNumber, secondNumber);
       break;
   }
 
 
   return result;
+}
+
+function pow(multiplyNumber,evaluator) {
+  var result = 1;
+  if (evaluator >= 0) {
+    for (var i = 0; i < evaluator; i++) {
+      result *= multiplyNumber;
+    }
+  } else {
+    for (var i = evaluator; i < 0; i++) {
+      result /= multiplyNumber;
+
+  }
 }
 
 function resultRender(firstNumber, secondNumber, action, result) {
